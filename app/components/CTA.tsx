@@ -55,7 +55,7 @@ export default function CTA() {
 
     const mergedPdf = await PDFDocument.create()
 
-    for (let file of files) {
+for (const file of files) {
       const arrayBuffer = await file.arrayBuffer()
       const pdf = await PDFDocument.load(arrayBuffer)
       const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices())
